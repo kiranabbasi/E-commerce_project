@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom'
 import { Assests } from '../Assests/Assests'
 
 const HomeBlog = () => {
+
+    const scrollY = () => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    };
+
     return (
         <div className='lg:w-10/12 w-11/12 m-auto my-16'>
-            <Link to='./Blog'>
+            <Link to='./Blog' onClick={scrollY}>
             <div className='py-5 text-center font-semibold text-2xl font-serif text-stone-800'>OUR BLOG</div>
                 <div className='flex sm:flex-row flex-col-reverse '>
                     <div className='sm:w-1/2 bg-gray-200 flex flex-col items-center justify-center text-center gap-1 sm:p-0 p-8'>

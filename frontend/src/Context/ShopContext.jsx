@@ -25,6 +25,10 @@ const ShopContextProvider = (props) => {
             toast.error("Product does not exist!");
             return;
         }
+        if(!token){
+            toast.error("Authorize Login first.")
+            return;
+        }
     
         CartData[itemId] = (CartData[itemId] || 0) + 1;
         setCartItems(CartData);

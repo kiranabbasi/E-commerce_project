@@ -3,6 +3,11 @@ import { Assests } from '../Assests/Assests'
 import { Link, NavLink } from 'react-router-dom'
 
 const Footer = () => {
+
+    const scrollY = () => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    };
+    
     return (
         <div className='bg-[#3A3845] w-full '>
             <div className=' xl:px-28 lg:px-20 px-5  md:flex '>
@@ -38,19 +43,19 @@ const Footer = () => {
                     </div>
                     <div className='text-sm '>
                         <p className='text-sm text-stone-200 py-2 '>COMPANY</p>
-                        <NavLink to='/' className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
+                        <NavLink to='/' onClick={scrollY} className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
                             <p className=''>Home</p>
                         </NavLink>
-                        <NavLink to='/Shop' className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
+                        <NavLink to='/Shop' onClick={scrollY} className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
                             <p className=''>Shop</p>
                         </NavLink>
-                        <NavLink to='/About' className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
+                        <NavLink to='/About' onClick={scrollY} className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
                             <p className=''>About Us</p>
                         </NavLink>
-                        <NavLink to='/Contact' className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
+                        <NavLink to='/Contact' onClick={scrollY} className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
                             <p className=''>Contact</p>
                         </NavLink>
-                        <NavLink to='/Contact' className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
+                        <NavLink to='/Contact'  className={(e) => e.isActive ? 'text-stone-200 ' : ''}  >
                             <p className=' '>Privacy Policy</p>
                         </NavLink>
                     </div>

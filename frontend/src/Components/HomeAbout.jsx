@@ -3,9 +3,12 @@ import { Assests } from '../Assests/Assests'
 import { Link } from 'react-router-dom'
 
 const HomeAbout = () => {
+    const scrollY = () => {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    };
     return (
         <div className='lg:w-10/12 w-11/12 m-auto my-16'>
-            <Link to='./About'>
+            <Link to='./About' onClick={scrollY}>
             <div className='flex sm:flex-row flex-col'>
                 <div className='sm:w-1/2 bg-gray-200 flex flex-col items-center justify-center text-center gap-1 sm:p-0 p-8'>
                     <p className='font-serif text-2xl text-stone-800'>Made in viet Nam <br />since 1450</p>
