@@ -58,12 +58,12 @@ const List = ({token}) => {
       {!loading && !error && list.length > 0 ? (
         <div>
           {/* Display the total number of products */}
-          <p className='text-xl font-serif text-stone-700 font-medium'>
+          <p className='text-xl font-serif text-stone-700 font-medium mb-6'>
             All Products ({list.length})
           </p>
 
           <div className='flex flex-col gap-2'>
-            <div className='hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-slate-100 text-sm'>
+            <div className='hidden md:grid grid-cols-[1fr_3fr_1fr_1fr_1fr] items-center py-1 px-2 border bg-slate-700 text-slate-200 text-sm '>
               <b>Image</b>
               <b>Name</b>
               <b>Category</b>

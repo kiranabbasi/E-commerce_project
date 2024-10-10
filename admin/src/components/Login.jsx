@@ -5,8 +5,9 @@ import { toast } from 'react-toastify';
 import { assests } from '../assets/Assests';
 
 const Login = ({ setToken }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // Prepopulate with the actual admin email and password for testing
+    const [email, setEmail] = useState('admin@moon.com'); // actual admin email
+    const [password, setPassword] = useState('moonadmin048'); // actual admin password
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
@@ -15,13 +16,12 @@ const Login = ({ setToken }) => {
             
             if (response.data.success) {
                 setToken(response.data.token);
-
             } else {
                 toast.error(response.data.message || 'Login failed.');
             }
         } catch (error) {
             console.error('Login error:', error);
-            toast.error(error.response?.data?.message || 'Login failed. Please try again.'); 
+            toast.error(error.response?.data?.message || 'Login failed. Please try again.');
         }
     };
 
@@ -40,8 +40,9 @@ const Login = ({ setToken }) => {
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         type="email"
+                        name="email"
                         className='w-full mb-5 placeholder:text-sm px-3 py-2 border border-stone-700'
-                        placeholder='your@email.com'
+                        autoComplete='email'
                         required
                     />
                     <p className='text-xs font-medium my-1'>Password</p>
@@ -49,8 +50,9 @@ const Login = ({ setToken }) => {
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         type="password"
+                        name="password"
                         className='w-full placeholder:text-sm mb-5 px-3 py-2 border border-stone-700'
-                        placeholder='Enter your Password'
+                        autoComplete='current-password'
                         required
                     />
                     <button
