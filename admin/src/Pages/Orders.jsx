@@ -57,7 +57,7 @@ const Orders = ({ token }) => {
       ) : (
         <ul className=" space-y-10">
           {orders.map((order) => (
-            <li key={order._id} className=" p-4 rounded-md  bg-gray-800 text-white shadow-lg md:flex gap-10">
+            <li key={order._id} className=" p-4 rounded-md  bg-gray-800 text-white shadow-lg lg:flex gap-10">
               <div className=''>
                 <p className="text-lg font-semibold">
                   Order ID: <span className="font-normal">{order._id}</span>
@@ -86,7 +86,7 @@ const Orders = ({ token }) => {
                 </ul>
               </div>
               <div className="">
-                <div className='flex gap-5 mb-3'>
+                <div className='flex  gap-5 mb-3 lg:mt-0 mt-3'>
                   <p className="font-medium">Status:</p>
                   <select onChange={(event)=> statusHandler(event, order._id)} value={order.status} className='p-1 font-semibold text-black rounded'>
                     <option value="Order Placed">Order Placed</option>
@@ -96,11 +96,11 @@ const Orders = ({ token }) => {
                     <option value="Delivered">Delivered</option>
                   </select>
                 </div>
-                <div>
+                <div className='flex gap-2'>
                   <p className="font-medium">Amount:</p>
                   <p className="text-gray-200">{order.amount}</p>
                 </div>
-                <div className='flex gap-1'>
+                <div className='flex gap-2'>
                   <p className="font-medium">Payment:</p>
                   <p className="text-gray-200">{order.payment ? 'Done' : 'Pending'}</p>
                 </div>
