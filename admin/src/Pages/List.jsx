@@ -81,7 +81,8 @@ const List = ({token}) => {
               <p>{Currency}{item.prize}.00</p>
               
               <img
-                onClick={() => !removing && removeProduct(item._id)}
+                // onClick={() => !removing && removeProduct(item._id)}
+                onClick={()=> toast.error('Not Authorized')}
                 title='Delete'
                 className={`w-4 cursor-pointer md:m-auto md:static  absolute top-5 right-10 ${removing ? 'opacity-50 cursor-not-allowed' : ''}`}
                 src={assests.cancel}

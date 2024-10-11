@@ -7,6 +7,11 @@ const Sidebar = () => {
     <div className='min-w-[18%] min-h-screen bg-slate-100'>
       <div className='flex flex-col gap-3 pt-6 px-5 text-[15px]'>
         
+        <NavLink className='flex items-center gap-3  sm:px-3 py-2 md:hover:bg-white md:hover:shadow duration-300 rounded-xl text-gray-600 hover:text-gray-900 hover:font-medium transition-colors' to="/">
+            <img className='w-5 ' src={assests.home} alt="" />
+            <p className='hidden md:block '>Dashboard</p>
+        </NavLink>
+
         <NavLink className='flex items-center gap-3  sm:px-3 py-2 md:hover:bg-white md:hover:shadow duration-300 rounded-xl text-gray-600 hover:text-gray-900 hover:font-medium transition-colors' to="/Add">
             <img className='w-5 ' src={assests.Plus} alt="" />
             <p className='hidden md:block '>Add Items</p>
