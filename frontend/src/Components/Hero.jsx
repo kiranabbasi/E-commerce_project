@@ -1,6 +1,6 @@
 import React from 'react'
 import { Assests } from '../Assests/Assests'
-import { Link } from 'react-router-dom'
+import { Link , NavLink} from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -13,7 +13,9 @@ const Hero = () => {
                     <p className='text-white text-3xl font-serif text-center'>BAT TRANG</p>
                     <p className='text-white text-3xl font-serif text-center'> DINNER SET</p>
                 </div>
+                <NavLink to="/shop" >
                 <button className='w-40 p-1 bg-white text-sm'>SHOP NOW</button>
+                </NavLink>
             </div>
             <div className='lg:w-10/12 w-11/12 m-auto  py-12'>
                 <div className='flex md:overflow-hidden overflow-x-scroll gap-7 justify-between '>
@@ -39,7 +41,7 @@ const Hero = () => {
                         <p className='font-serif lg:text-3xl text-2xl text-stone-600'>Up to 40% off our <br  /> Christmas collection</p>
                         <p className='text-stone-600'>Lorem ipsum dolor sit amet consectetur <br className='sm:hidden block' /> adipiscing <br className='sm:block hidden'/> eli mattis sit  phasellus mollis sit <br className='sm:hidden block' />aliquam sit nullam <br className='sm:block hidden' /> neque ultrices.
                         </p>
-                        <button className='underline text-sm font-medium'>SHOP NOW</button>
+                        <NavLink to='/shop'><button className='underline text-sm font-medium'>SHOP NOW</button></NavLink>
                     </div>
                     <img className='md:w-5/12 lg:w-6/12  h-72 object-cover object-center' src={Assests.Headlineimg} alt="headlineimg" />
                 </div>
